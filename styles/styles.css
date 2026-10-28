@@ -1,0 +1,253 @@
+:root {
+  --medium-color: #222222;
+  --button-color: #402f2c;
+  --white-color: #ffffff;
+  --hero-background: #f9f6f5;
+  --accent-color: #873b29;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-color);
+}
+
+/* HEADER */
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--medium-color);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  /* text-decoration-line: underline; */
+}
+
+.logo:after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--medium-color);
+}
+
+.logo:hover,
+.logo:focus {
+  color: var(--accent-color);
+}
+
+.logo:hover::after,
+.logo:focus::after {
+  background-color: var(--accent-color);
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.external-links a:hover svg,
+.external-links a:focus svg {
+  fill: var(--accent-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  padding: 40px 0;
+  display: block;
+  color: var(--medium-color);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.external-links {
+  display: flex;
+  gap: 24px;
+}
+
+.external-links li svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--medium-color);
+}
+
+.external-links a {
+  display: flex;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  min-height: 747px;
+  padding-top: 178px;
+  background-color: var(--hero-background);
+  background-image: url('../images/background.png');
+  background-repeat: no-repeat;
+  background-position: right -22px bottom;
+}
+
+.hero h1 {
+  width: 621px;
+  color: #000000;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  width: 516px;
+  color: #555555;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-search {
+  display: flex;
+  align-items: center;
+  width: 326px;
+  height: 48px;
+  padding: 8px;
+  background-color: var(--white-color);
+  margin-bottom: 60px;
+}
+
+.hero-search-input {
+  flex-grow: 1;
+  min-width: 0;
+  padding: 0 8px;
+  border: none;
+  color: var(--medium-color);
+  font-size: 14px;
+  line-height: 1.43;
+  background-color: transparent;
+}
+
+.hero-search-input::placeholder {
+  color: #999999;
+}
+
+.hero-search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background-color: var(--button-color);
+}
+
+.hero-search-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--white-color);
+}
+
+.hero-shop-link {
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: var(--button-color);
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+}
+
+.hero-list {
+  position: absolute;
+  bottom: 0;
+  /*Середина макета 1440/2=720px, лівий край блоку зі стрілками 643px, зміщується блок від середини ліворуч на 720-643=77px*/
+  left: calc(50% - (720px - 643px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 145px;
+  height: 138px;
+  background-color: var(--hero-background);
+}
+
+.hero-arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.hero-arrow-button svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--medium-color);
+}
+
+.hero-search-button:hover,
+.hero-search-button:focus,
+.hero-shop-link:hover,
+.hero-shop-link:focus {
+  background-color: var(--accent-color);
+}
+
+.hero-arrow-button:hover svg,
+.hero-arrow-button:focus svg {
+  fill: var(--accent-color);
+}
+
+.hero-search-button,
+.hero-arrow-button {
+  cursor: pointer;
+}

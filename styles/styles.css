@@ -159,8 +159,8 @@ nav a {
 }
 
 .hero-search {
+  position: relative;
   display: flex;
-  align-items: center;
   width: 326px;
   background-color: var(--white-color);
   margin-bottom: 60px;
@@ -168,9 +168,8 @@ nav a {
 
 .hero-search-input {
   flex-grow: 1;
-  min-width: 0;
   height: 48px;
-  padding: 0 8px 0 16px;
+  padding: 0 48px 0 16px;
   border: none;
   color: var(--medium-color);
   font-size: 14px;
@@ -183,11 +182,12 @@ nav a {
 }
 
 .hero-search-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  flex-shrink: 0;
   width: 32px;
   height: 32px;
   padding: 0;
@@ -214,20 +214,21 @@ nav a {
 .hero-list {
   display: flex;
   align-self: center;
-  gap: 14px;
-  padding: 49px 24px;
   background-color: var(--hero-background);
 }
 
 .hero-arrow-button {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
   border: none;
   background-color: transparent;
+}
+
+.hero-list li:first-child .hero-arrow-button {
+  padding: 49px 0 49px 24px;
+}
+
+.hero-list li:last-child .hero-arrow-button {
+  padding: 49px 27px 49px 14px;
 }
 
 .hero-arrow-button svg {

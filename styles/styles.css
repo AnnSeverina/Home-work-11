@@ -224,11 +224,11 @@ nav a {
 }
 
 .hero-list li:first-child .hero-arrow-button {
-  padding: 49px 0 49px 24px;
+  padding: 49px 8.5px 49px 24px;
 }
 
 .hero-list li:last-child .hero-arrow-button {
-  padding: 49px 27px 49px 14px;
+  padding: 49px 27px 49px 5.5px;
 }
 
 .hero-arrow-button svg {
